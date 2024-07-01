@@ -14,6 +14,6 @@ This project is a simple single-page website outlining my tech goals for the nex
 
 
 ## How to View the Project
-The website is hosted on [GitHub Pages]. You can view it by clicking the following link: [Website URL]
+The website is hosted on [vercel]. You can view it by clicking the following link: [https://hng-task-one-git-main-cheemma1s-projects.vercel.app/]
 
 
