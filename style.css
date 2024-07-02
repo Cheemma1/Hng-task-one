@@ -60,15 +60,11 @@ body {
   color: var(--clr-neon);
   font-size: 4rem;
 }
-img[data-testid="slackProfilePicture"] {
-  max-width: 100%; /* Ensures the image is responsive */
-  height: auto; /* Maintains the aspect ratio */
-  display: block; /* Ensures the image doesn't have extra space around it */
-  margin: 0 auto; /* Centers the image horizontally */
+.slackImage img {
+  max-width: 100%;
+  margin: 0 auto;
 }
-/* .goal {
-  text-align: center;
-} */
+
 .goal h2 {
   text-align: center;
   font-size: 3rem;
@@ -110,5 +106,12 @@ footer {
   }
   .goal h2 {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 424px) {
+  .footer-links {
+    gap: 0.4rem;
+    font-size: 0.8rem;
   }
 }

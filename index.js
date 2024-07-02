@@ -3,7 +3,18 @@ function updateTimeAndDay() {
   const currentDayElement = document.getElementById("currentDay");
 
   const now = new Date();
-  const utcTime = now.toUTCString().split(" ")[4]; // Getting the time part from the UTC string
+  const utcHours = now.getUTCHours();
+  const utcMinutes = now.getUTCMinutes();
+  const utcSeconds = now.getUTCSeconds();
+
+  // Converting 24-hour format to 12-hour format
+  const hours = utcHours % 12 || 12;
+  const minutes = utcMinutes.toString().padStart(2, "0");
+  const seconds = utcSeconds.toString().padStart(2, "0");
+  const ampm = utcHours >= 12 ? "PM" : "AM";
+
+  const utcTime = `${hours}:${minutes}:${seconds} ${ampm}`;
+
   const daysOfWeek = [
     "Sunday",
     "Monday",
@@ -21,6 +32,5 @@ function updateTimeAndDay() {
 
 // This Updates the time and day when the page loads
 updateTimeAndDay();
-
 
 setInterval(updateTimeAndDay, 60000); // 60000 milliseconds = 1 minute
